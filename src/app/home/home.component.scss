@@ -1,0 +1,164 @@
+.recognition-wrapper{
+    height: 100%;
+    overflow-y: hidden;
+    margin-left: 10%; 
+    margin-right: 10%;
+    background-color: rgba(white, 0.6);
+    backdrop-filter: blur(3px);
+    border-radius: 12px;
+}
+
+.left-side{
+    float : left;
+    width: 85%;
+    //margin-left: 15%; 
+    //text-align: center; 
+    //justify-content: center;
+}
+
+.right-side{
+    float : right;
+    width: 15%;
+    margin-left: 0%; 
+    text-align: left;
+}
+
+.btn{
+  display: inline-flex;
+  align-items: center;
+  
+  padding: 12px 22px;
+  background: rgba(black, 0.7);
+
+  text-decoration: none;
+  
+  color: white;
+
+  font-size: 18px;
+  font-weight: 600;
+  font-family: inherit;
+
+  border: none;
+  border-radius: 4px;
+
+  cursor: pointer;
+
+  &:hover {
+      background: rgba(black, 0.78);
+      backdrop-filter: blur(2px);
+  }
+
+  &:active {
+      background: rgba(black, 0.85);
+  }
+  display: flex ;
+  gap: 12px;
+    
+    margin-top: 1%;
+    margin-bottom: 1%;
+    
+
+    &.btns-centered {
+        justify-content: center;
+    }
+
+    .align-end {
+        margin-left: auto;
+    }
+}
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  $button-height: 30px;
+  $box-width: 300px;
+  $box-height: 212px;
+  
+  .share-buttons {
+    //position: relative;
+    width: $box-width;
+    height: $box-height;
+    padding-left: ($box-width / 2) - ($button-height / 2);
+    top: 50%;
+    left: 50%;
+    margin-left:-65%;
+    //margin-left: -($box-width / 2);
+    //margin-top: -($box-height / 2);
+    
+    .share-button {
+      float: left;
+      margin-top: 15px;
+      
+      &:first-child {
+        margin-top: 0;
+      }
+      
+      &:after {
+        clear: both;
+        display: table;
+      }
+    }
+  }
+  
+  .share-button {
+    display: block;
+    position: relative;
+    height: $button-height;
+    
+    &:hover {
+      cursor: pointer;
+      
+      .share-button-primary {
+        box-shadow: 1px 0 0 0 rgba(0, 0, 0, .1);
+      }
+      
+      .share-button-secondary-content {
+        transform: translate3d(0, 0, 0);
+      }
+    }
+  }
+  
+  .share-button-primary {
+    position: absolute;
+    background: #fff;
+    width: $button-height;
+    height: $button-height;
+    border-radius: ($button-height / 2);
+    left: 0;
+    top: 50%;
+    margin-top: -($button-height / 2);
+  }
+  
+  .share-button-icon {
+    display: block;
+    color: #242424;
+    position: absolute;
+    width: $button-height;
+    line-height: $button-height;
+    font-size: 16px;
+    margin-top: 1px;
+  }
+  
+  .share-button-secondary {
+    overflow: hidden;
+    margin-left: ($button-height / 2);
+    height: $button-height;
+  }
+  
+  .share-button-secondary-content {
+    font-family: sans-serif;
+    font-size: .75em;
+    background: #fff;
+    display: block;
+    height: $button-height;
+    text-align: left;
+    padding-left: ($button-height * .8);
+    padding-right: ($button-height * .6);
+    line-height: $button-height;
+    color: #242424;
+    border-radius: 0 ($button-height / 2) ($button-height / 2) 0;
+    transform: translate3d(-100%, 0, 0);
+    transition: transform 175ms ease;
+  }
+

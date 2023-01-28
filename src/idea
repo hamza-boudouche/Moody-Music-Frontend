@@ -1,0 +1,10 @@
+l'utilisateur doit avoir la possibilité de modifier les infos suivantes :
+     username, email,password apres verification de l'ancien password, la photo de profil
+user peut voir les infos suivantes :
+    username, email,password apres verification de l'ancien password, la photo de profil
+    +les 5 derniers playlist upvoted,les playlist ajoutés, le nombre des upvotes and downvotes.
+
+pour l'inscription : username+email+password 
+pour chaque playslist : affichage de upvoted et downvoted like youtube 
+logout and delete account.
+share our website.

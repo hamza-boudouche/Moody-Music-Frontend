@@ -1,0 +1,54 @@
+.setting-wrapper{
+    height: 100%;
+    overflow-y: auto;
+    margin-left: 10%; 
+    margin-right: 10%;
+    background-color: rgba(rgb(0, 0, 0), 0.7);
+    backdrop-filter: blur(3px);
+
+    border-radius: 12px;
+
+    color: #fff;
+}
+
+.row{
+    text-align: center;
+    margin-top: 1%;
+}
+.card-title{
+    font-style: oblique;
+    font-weight: bold;
+    font-size: small;
+    color: black;
+}
+
+iframe{
+    max-width: 100px;
+    max-height: 100px;
+    
+}
+.card{
+    border-radius: 12px;
+    max-width: 250px;
+    max-height: 250px;
+}
+.config{
+    margin-left: 2%; 
+    margin-right: 2%; 
+}
+
+.butt{
+    display: flex ;
+    gap: 12px;
+    
+    margin-top: 1%;
+    margin-bottom: 1%;
+
+}
+.form-outline{
+    background-color: #fff;
+    width: 40%;
+    justify-content: center;
+}
+  
+

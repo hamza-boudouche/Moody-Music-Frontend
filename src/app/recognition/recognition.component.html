@@ -1,0 +1,86 @@
+<div class="recognition-wrapper d-flex align-items-center justify-content-center">
+  <div class="left-side text-center">
+    <input style="display: none" type="file" (change)="onselectFile($event)" #fileInput />
+    <div class="btns-container btns-centered" style="color: white">
+      <a class="btn add-btn" (click)="fileInput.click()">
+        <i class="material-icons-outlined">backup</i>
+        Upload your photo
+      </a>
+      <a class="btn add-btn" (click)="removecurrent()">
+        <i class="material-icons-outlined">settings_backup_restore</i>
+      </a>
+      <a class="btn manage-btn" *ngIf="!camera   " (click)="setupDevices()">
+        <i class="material-icons-outlined">camera</i>
+        Open camera
+      </a>
+      <a class="btn manage-btn" *ngIf="camera " (click)="capture()">
+        <i class="material-icons-outlined">camera</i>
+        Take a photo
+      </a>
+    </div>
+
+    <div class="photo" *ngIf="!camera">
+      <img id="img" [src]="url" class="img-thumbnail rounded shadow-2-strong" alt="..." />
+    </div>
+
+    <div *ngIf="camera">
+      <video class="photo img-thumbnail rounded shadow-2-strong" [class.show]="!isCaptured" [class.hide]="isCaptured"
+        #video id="video" [width]="WIDTH" [height]="HEIGHT"></video>
+      <canvas class="photo img-thumbnail rounded shadow-2-strong" [class.show]="isCaptured" [class.hide]="!isCaptured"
+        #canvas id="canvas" [width]="WIDTH" [height]="HEIGHT"></canvas>
+    </div>
+
+    <div class="btns-container btns-centered" style="color: white">
+      <a class="btn add-btn" (click)="onUpload()">
+        <i class="material-icons-outlined">start</i>
+        Start recognition
+      </a>
+      <a class="btn manage-btn" (click)="onResult()">
+        <i class="material-icons">verified</i>
+        <div id="result">Approve the result</div>
+      </a>
+    </div>
+  </div>
+
+  <div class="right-side d-flex align-items-center justify-content-center">
+    <div id="btnleft">
+      <div class="btns-container btns-centered" style="color: white">
+        <a class="btn add-btn" (click)="backlist()">
+          <i class="material-icons-outlined">arrow_back_ios</i>
+        </a>
+      </div>
+    </div>
+
+    <div>
+      <div>
+        Titre: <cite id="idtitle"></cite><br />
+        Genre: <cite id="idgenre"> </cite>
+      </div>
+
+      <div>
+        <iframe id="spotifyurl" src="https://giphy.com/embed/kgDPHrFosJLPh7WBmA" width="300" height="300" frameborder="0"
+          allowtransparency="true" allow="encrypted-media" style="border: 3px solid rgb(27, 25, 25)">
+        </iframe>
+      </div>
+
+      <div>
+        <div class="btns-container btns-centered" style="color: white">
+          <a class="btn add-btn">
+            <i class="material-icons-outlined">thumb_up</i>
+          </a>
+          <a class="btn add-btn">
+            <i class="material-icons-outlined">thumb_down</i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div id="btnright">
+      <div class="btns-container btns-centered" style="color: white">
+        <a class="btn add-btn" (click)="nextlist()">
+          <i class="material-icons-outlined">arrow_forward_ios</i>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
